@@ -2,6 +2,8 @@
 
 A browser-based AI agent that autonomously calls MPP-enabled services and pays for them in USDC. Built for the AI Engineer Conference Singapore workshop to demonstrate machine-to-machine payments with no human in the payment loop.
 
+Machine Payments Protocol: https://mpp.dev/
+
 ## What it does
 
 SamurAI is a simulated agent that takes a list of products feed, discovers a participant's ListingBot endpoint via `openapi.json`, and generates listings for each product — paying automatically in USDC via the Tempo blockchain for every call.

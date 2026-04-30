@@ -4,7 +4,24 @@ A browser-based AI agent that autonomously calls MPP-enabled services and pays f
 
 ## What it does
 
-SamurAI takes a list of products, discovers a participant's ListingBot endpoint via `openapi.json`, and generates listings for each product — paying automatically in USDC via the Tempo blockchain for every call.
+SamurAI is a simulated agent that takes a list of products feed, discovers a participant's ListingBot endpoint via `openapi.json`, and generates listings for each product — paying automatically in USDC via the Tempo blockchain for every call.
+
+<img width="1509" height="905" alt="image" src="https://github.com/user-attachments/assets/3d6aabe8-9354-476e-9b16-6d7116d1fe65" />
+
+
+The agent comes with a crypto wallet which can be spent with any services following the MPP protocol. Debug panel display MPP flow.
+<br>
+
+<br>
+<img width="1512" height="907" alt="image" src="https://github.com/user-attachments/assets/d12c21f8-18f2-4f8b-a24a-e0b1d34f6805" />
+
+To set up, developers will only need to input their endpoint under "Simulation". A collapsible live feed is available to view all USDC spent. 
+
+
+<br>
+Activities of the wallet can be found here: 
+https://explore.testnet.tempo.xyz/address/0x216d40b5b13d9E28216A3282DF4AFb1d2370DCeF
+
 
 ## Stack
 
@@ -58,4 +75,4 @@ The agent wallet signs all transactions using `viem/accounts` with `VITE_AGENT_P
 
 ## Workshop Context
 
-SamurAI is the facilitator's agent. Workshop participants build and deploy their own [ListingBot](https://github.com/jillianchi/ai-engineer-mpp) endpoint — SamurAI then discovers and calls each participant's endpoint, paying in USDC per listing.
+SamurAI is the facilitator's agent - to be hosted publicly. Workshop participants build and deploy their own [ListingBot](https://github.com/jillianchi/ai-engineer-mpp) endpoint — SamurAI then discovers and calls each participant's endpoint, paying in USDC per listing.

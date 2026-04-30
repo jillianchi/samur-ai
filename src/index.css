@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* ── Design tokens — matching demoeng-acp (light mode body, dark sidebars) ── */
+:root {
+  /* Main content — light */
+  --bg:              #ffffff;
+  --bg-subtle:       #f9f8f6;
+  --bg-card:         #ffffff;
+  --border:          rgba(0,0,0,0.08);
+  --text:            #0a0a0a;
+  --text-muted:      rgba(0,0,0,0.50);
+  --text-faint:      rgba(0,0,0,0.30);
+
+  /* Sidebars + debug panel — dark (demoeng-acp DARK_BG / DARK_ACCENT) */
+  --sidebar-bg:      #1e1b17;
+  --debug-bg:        #1e1b17;
+  --debug-toolbar:   #141210;
+
+  /* Brand */
+  --blurple:         #635bff;
+  --blurple-light:   rgba(99,91,255,0.12);
+
+  /* Fonts */
+  --font-sans:       'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display:    'Syne', ui-sans-serif, sans-serif;
+  --font-mono:       'Geist Mono', ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Film grain overlay — exact match from demoeng-acp */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 192px 192px;
+}
+
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
